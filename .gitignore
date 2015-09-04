@@ -1,28 +1,40 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#include <string>
+#include <iostream>
+#include <cmath>
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+namespace Compound 
 
-# Fortran module files
-*.mod
+{
+interest
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+	class Program
+	{
 
-# Executables
-*.exe
-*.out
-*.app
+		 static void Main()
+		 {
+		decimal i, CI, NY, PP, E, P; //Assign a value type could be float double for handling larger values but for precision use decimal
+			std::wcout << std::wstring(L"Enter the interset : ") << std::endl; //displays what to input
+			i = decimal::Parse(Console::ReadLine()); //reads the input and stores it
+			std::wcout << std::wstring(L"Enter the number of times compounded per year : ") << std::endl; //displays what to input
+			CI = decimal::Parse(Console::ReadLine()); //reads the input and stores it
+			std::wcout << std::wstring(L"Enter the number of years : ") << std::endl; //displays what to input
+			NY = decimal::Parse(Console::ReadLine()); //reads the input and stores it
+			std::wcout << std::wstring(L"Enter the Principal value : ") << std::endl;
+			P = decimal::Parse(Console::ReadLine());
+
+		PP = P*(1 + (i / CI)); //calculates the base
+		E = NT*CI; //calculates the exponent
+
+		decimal Total = pow(PP, E); //function for calculating the Power Exponent Value
+
+		std::wcout << std::wstring(L"interset : ") << i << std::endl; //displays the interset
+		std::wcout << std::wstring(L"number of times compounded per year : ") << CI << std::endl; //displays the compound per year
+		std::wcout << std::wstring(L"Number of years : ") << NY << std::endl; //displays the years
+		std::wcout << std::wstring(L"Result : ") << Total << std::endl; //displays the total gain
+		Console::ReadLine(); //waits for a user interface"press any key" to return
+		 }
+
+	};
+
+}
